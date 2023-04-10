@@ -1,13 +1,8 @@
 package test;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import java.util.*;
-
 import config.AppConfig;
 import main.AppSpring;
-import model.Patient;
-import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional;
-import repository.PatientRepository;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App2 {
 
