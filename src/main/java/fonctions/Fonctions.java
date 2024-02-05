@@ -28,7 +28,6 @@ public class Fonctions {
 	}
 	
 	public static Boolean SaisieBoolean(String texte) {
-		
 		System.out.println(texte);
 		Scanner sc=new Scanner(System.in);
 		Boolean val=sc.nextBoolean();
@@ -54,7 +53,7 @@ public class Fonctions {
 	// Fonctions metiers
 	public static void afficherVisitesPatient() {
 		// TODO Auto-generated method stub
-		int num=SaisieInt("Veuillez donner votre numero de securité:");
+		int num=SaisieInt("Veuillez donner votre numero de securitï¿½:");
 		EntityManagerFactory emf= Context.getInstance().getEmf();
 		EntityManager em=emf.createEntityManager();
 		Patient p= em.find(Patient.class, num);
@@ -96,7 +95,7 @@ public class Fonctions {
 
 	public static List <Patient> ajoutPatient( List <Patient>  fileAttente) {
 		// TODO Auto-generated method stub
-		int num=SaisieInt("Veuillez donner votre numero de securité:");
+		int num=SaisieInt("Veuillez donner votre numero de securitï¿½:");
 		EntityManagerFactory emf=Context.getInstance().getEmf();
 		EntityManager em=emf.createEntityManager();
 		Patient p=em.find(Patient.class, num);
