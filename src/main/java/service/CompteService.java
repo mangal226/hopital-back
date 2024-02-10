@@ -14,8 +14,8 @@ public class CompteService {
 	private CompteRepository compteRepo;
 	
 	public void suppression(Compte compte) {
-		Compte compteEnBase;
-		compteEnBase=compteRepo.findById(compte.getId()).orElseThrow(CompteException::new);
+		//Compte compteEnBase;
+		//compteEnBase=compteRepo.findById(compte.getId()).orElseThrow(CompteException::new);
 		compteRepo.delete(compte);
 	}
 	

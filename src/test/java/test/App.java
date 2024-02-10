@@ -1,11 +1,12 @@
 package test;
 
 import model.*;
-import util.Context;
+//import util.Context;
 
 import java.util.LinkedList;
 
 import fonctions.*;
+import util.Context;
 
 
 public class App {
@@ -18,7 +19,7 @@ public class App {
 		System.out.println("---Menu de connexion---");
 		String login=Fonctions.SaisieString("Veuillez entrer votre login:");
 		String password=Fonctions.SaisieString("Veuillez entrer votre mot de passe:");
-		Compte connected=Context.getInstance().getDaoC().connex(login, password);
+		Compte connected= Context.getInstance().getDaoC().connex(login, password);
 		
 		if(connected instanceof Medecin) 
 		{

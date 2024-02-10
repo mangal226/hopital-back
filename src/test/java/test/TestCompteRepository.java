@@ -1,14 +1,7 @@
 package test;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.*;
 
-import javax.transaction.Transactional;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -21,6 +14,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import config.AppConfig;
 import main.AppSpring;
 import repository.CompteRepository;
+
+import javax.transaction.Transactional;
 
 
 @Transactional

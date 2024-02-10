@@ -1,5 +1,6 @@
 package config;
 
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,11 +11,13 @@ import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.spi.PersistenceProvider;
 import java.util.Properties;
 
 @Configuration
@@ -46,6 +49,7 @@ public class AppConfig {
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(dataSource);
 		emf.setPackagesToScan("model");
+		//emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		emf.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		emf.setJpaProperties(hibernateProperties());
 		return emf;
@@ -54,9 +58,8 @@ public class AppConfig {
 	private Properties hibernateProperties() {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto", "update");
-		 properties.setProperty("hibernate.dialect",
-		 "org.hibernate.dialect.MySQL5InnoDBDialect");
-		//properties.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
+		 //properties.setProperty("hibernate.dialect","org.hibernate.dialect.MySQLInnoDBDialect");
+		properties.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
 		properties.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
 		properties.setProperty("hibernate.format_sql", "true");
 		return properties;

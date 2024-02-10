@@ -3,10 +3,11 @@ import model.Patient;
 import util.Context;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 import dao.IDAOPatient;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
 public class DAOPatient implements IDAOPatient{
 

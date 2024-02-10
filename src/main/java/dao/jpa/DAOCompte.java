@@ -4,11 +4,12 @@ import model.Compte;
 import util.Context;
 import java.util.List;
 
+
+import dao.IDAOCompte;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
-
-import dao.IDAOCompte;
 
 public class DAOCompte implements IDAOCompte {
 

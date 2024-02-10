@@ -1,12 +1,13 @@
 package dao.jpa;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 import dao.IDAOVisite;
 import model.Visite;
 import util.Context;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
 public class DAOVisite implements IDAOVisite{
 

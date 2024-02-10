@@ -1,18 +1,12 @@
 package model;
 
+import javax.persistence.*;
 import java.util.Objects;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
 
 @Entity
 @Table(name="compte")
-@Inheritance (strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type_compte")
 public class Compte {
 	@Id

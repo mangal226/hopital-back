@@ -1,20 +1,14 @@
 package fonctions;
 
-import java.util.List;
-import java.util.Scanner;
+import model.Patient;
+import model.Visite;
+import util.Context;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
-
-import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
-
-import model.Compte;
-import model.Medecin;
-import model.Patient;
-import model.Secretaire;
-import model.Visite;
-import util.Context;
+import java.util.List;
+import java.util.Scanner;
 
 public class Fonctions {
 	

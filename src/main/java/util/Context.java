@@ -1,10 +1,11 @@
 package util;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import dao.jpa.DAOCompte;
 import dao.jpa.DAOPatient;
 import dao.jpa.DAOVisite;
 import model.Compte;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 
 public class Context {

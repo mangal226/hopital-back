@@ -1,8 +1,7 @@
 package model;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-
-import fonctions.*;
 
 @Entity
 @DiscriminatorValue("Secretaire")
